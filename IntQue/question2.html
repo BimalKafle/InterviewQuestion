@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Interview question 2</title>
+
+	</head>
+	<style>	
+	#cntr{
+		border:1px solid black;
+		height:50px;
+		width:100px;
+		Margin:5%;
+		background:red;
+		}
+	</style>
+	<body>
+		<div id="cntr">
+			<p id="demo">Hello</p>
+		</div>
+		<button id = "myButton" onClick = "cColor()" style="">Button</button>
+		<script>
+		function cColor() {
+		var a = document.getElementById("cntr").style.transform;
+		
+		if(a=="rotate(0deg)"||a==""){
+		document.getElementById("cntr").style.transform = "rotate(90deg)";
+		document.getElementById("cntr").style.backgroundColor = "blue";		
+		}
+		else{
+		document.getElementById("cntr").style.transform = "rotate(0deg)";
+		document.getElementById("cntr").style.backgroundColor = "red";
+		}
+		}
+
+</script>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>Interview question 3</title>
+
+	</head>
+	<style>
+	#container{
+		margin:10px;
+		padding:10px;
+		align:center;
+		}
+	</style>
+	<body>
+	<div id="container">
+		<form>
+		<h4>Select your device</h4>
+			<input type="Radio" name="button" value="Mobile" onclick="myfunc()" id="mobl">Mobile
+			<input type="Radio" name="button" value="Pc" onclick="myfunc()" id="pc">Pc/Laptop
+			<input type="Radio" name="button" value="Tablet" onclick="myfunc()" id="tab">Tablet
+			<!--for mobile-->
+			<div id="displayMbl" style="display: none">
+			<select id="mobile" name="Operating System used">
+				<option selected disabled>Operating System used</option>
+				<option value="Android">Android</option>
+				<option value="IOS">IOS</option>
+			
+			</select>
+			</div>
+			<!--for Pc/Laptop-->
+			<div id="displayPc" style="display: none">
+			<select id="pc/laptop">
+			<option selected disabled>Operating System used</option>
+				<option value="Windows">Windows</option>
+				<option value="Linux">Linux</option>
+				<option value="MacOs">MacOs</option>
+			</select>
+			</div>
+			<!--for Tablet-->
+			<div id="displayTablet" style="display: none">
+			<select id="tablet">
+			<option selected disabled>Operating System used</option>
+			<option value="IOS">IOS</option>	
+			</select>
+			</div>
+			
+		</form>
+	</div>
+		<script>
+		function myfunc(){
+			  displayMbl.style.display = mobl.checked ? "block" : "none";
+			  displayPc.style.display = pc.checked ? "block" : "none";
+			  displayTablet.style.display = tab.checked ? "block" : "none";
+			  
+			  
+			  }
+		</script>
+	</body>
+</html>

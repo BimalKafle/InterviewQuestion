@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Interview question 1</title>
+
+	</head>
+	<body>
+
+		<div style="margin:10px;padding:10px;">
+		<button id = "cButton" onClick = "cColor()" style="background:red;border-radius:0px 20px 0px 20px;height:50px;width:100px;color:white;">Button
+		</button>
+		</div>
+		<script>
+		function cColor() {
+		var x = document.getElementById("cButton").style.backgroundColor;
+		
+		if(x=='red'){
+		document.getElementById("cButton").style.backgroundColor = "blue";
+		}else{
+		document.getElementById("cButton").style.backgroundColor = "red";
+		}
+		}
+
+</script>
+	</body>
+</html>

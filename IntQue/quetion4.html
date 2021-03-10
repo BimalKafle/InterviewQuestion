@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>Interview question 4</title>
+
+	</head>
+	<body>
+	<script>
+		
+		var number=new Array(10);
+		<!--inserting the random number in an array from(1-100)-->
+		for (var i = 0; i < number.length; i++) {
+		number[i]=Math.floor(Math.random() * 100);
+		}
+		<!--Sorting the number present in the array-->
+		number=number.sort(function(a, b){return a - b});
+		console.log(number);
+		<!--Finding the min and max of an individual number-->
+		for(var i=0;i<number.length;i++){
+			var min,max;
+			var q=Math.floor(number[i]/10);	
+			if(q==0){
+				min=0;
+				max=min+10-1;
+			}else{
+				min=q*10;
+				max=min+10-1;
+			}
+			var j=i;
+			<!--output is shown in the console-->
+			console.log('---------');
+			console.log(min+'-'+max+':');
+		
+			var count=0;
+			<!--the range of only those number that are present in the array are shown and number between those range in array -->
+			<!-- are shown with number of stars. -->
+			while(number[j]>=min&&number[j]<=max){
+				count++;
+				j++;
+			
+			}
+			i=j-1;
+			if(count>=1){
+				for(var k=0;k<count;k++){
+				console.log('*');
+				console.log('');
+				}
+			}
+			console.log('---------');
+		}
+		
+	</script>
+	</body>
+</html>
